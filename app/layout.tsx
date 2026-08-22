@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const sora = Sora({
@@ -21,15 +22,30 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Praise — Full-Stack Developer",
+  metadataBase: siteUrl,
+  title: {
+    default: "Udeh Praise C. — Full-Stack Software Engineer",
+    template: "%s · Praise",
+  },
   description:
     "Portfolio of Udeh Praise C., a full-stack software engineer building dependable products across frontend, backend, and infrastructure.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "Udeh Praise C. — Full-Stack Software Engineer",
+    description: "Full-stack software engineer building dependable products across frontend, backend, and infrastructure.",
+    siteName: "Udeh Praise C.",
+    images: [{ url: "/opengraph-image", alt: "Udeh Praise C. — Full-Stack Software Engineer" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${sora.variable} ${inter.variable} ${jetBrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">

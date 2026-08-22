@@ -83,7 +83,14 @@ export const projectRecords: ProjectRecord[] = [
     outcome: [
       "Built an end-to-end workflow covering authentication, question banks, exam management, timed test-taking, automated grading, and result reporting. The platform remains under development.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/nlp-exam.webp",
+        alt: "NLP Examination System landing page with a student illustration and links to log in or sign up",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   {
     editorialStatus: "published",
@@ -110,7 +117,14 @@ export const projectRecords: ProjectRecord[] = [
     outcome: [
       "Produced a working end-to-end publishing workflow spanning authentication, role-based dashboards, submissions, PDF uploads, journal and issue management, AI-assisted summaries, and publication. It reduced manual administration, although public adoption metrics were not recorded.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/online-journal.webp",
+        alt: "Online Journal System landing page presenting its publishing workflow and AI-assisted features",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   {
     editorialStatus: "published",
@@ -141,7 +155,14 @@ export const projectRecords: ProjectRecord[] = [
       "Development validation included 63 focused Phase 1 tests, 11 backend smoke tests, successful TypeScript checks across all three applications, applied database migrations, and a controlled pilot enabled through audited feature overrides.",
       "The product remains in active development: its Phase 1 foundation is validated, while production-rollout verification and later roadmap work continue.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/tailpoint.webp",
+        alt: "Tailpoint landing page showing its project workspace and project-tracking dashboard",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   {
     editorialStatus: "published",

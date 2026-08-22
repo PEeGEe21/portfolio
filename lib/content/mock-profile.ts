@@ -14,7 +14,7 @@ export const mockProfile: Profile = {
     "Today, I enjoy owning complex full-stack problems from discovery through delivery. I care about understanding the real constraint, communicating trade-offs clearly, and building software that people can trust and use.",
   ],
   email: "mailpraiseudeh@gmail.com",
-  resumeUrl: null,
+  resumeUrl: "/docs/udeh-praise-resume.pdf",
   socialLinks: [
     {
       label: "GitHub",
@@ -27,20 +27,65 @@ export const mockProfile: Profile = {
   ],
   skillGroups: [
     {
-      title: "Frontend",
-      skills: ["Next.js", "React", "Angular", "TypeScript", "JavaScript", "HTML", "CSS"],
+      title: "Languages",
+      skills: ["TypeScript", "JavaScript", "HTML", "CSS"],
     },
     {
-      title: "Backend",
-      skills: ["NestJS", "Node.js", "Laravel", "Django", "REST APIs"],
+      title: "Frameworks & libraries",
+      skills: [
+        "React",
+        "Next.js",
+        "Node.js",
+        "NestJS",
+        "Django",
+        "Laravel",
+        "React Native",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "Material UI",
+      ],
     },
     {
-      title: "Data & infrastructure",
-      skills: ["PostgreSQL", "MySQL", "BullMQ", "Git", "CI/CD"],
+      title: "Databases & ORMs",
+      skills: [
+        "MySQL",
+        "PostgreSQL",
+        "Prisma",
+        "Supabase",
+        "Firebase Firestore",
+        "MongoDB",
+      ],
     },
     {
-      title: "Web3 & integrations",
-      skills: ["Ethers.js", "Wagmi", "RainbowKit", "GraphQL", "Apollo Client"],
+      title: "Tools & platforms",
+      skills: [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "n8n",
+        "BullMQ",
+        "CI/CD",
+        "Framer",
+        "Figma",
+        "Canva",
+        "Responsive Design",
+        "Automation Workflows",
+      ],
+    },
+    {
+      title: "Authentication",
+      skills: ["Firebase Auth", "NextAuth.js", "Google OAuth"],
+    },
+    {
+      title: "APIs & integrations",
+      skills: [
+        "REST APIs",
+        "GraphQL",
+        "Apollo Client",
+        "Ethers.js",
+        "Wagmi",
+        "RainbowKit",
+      ],
     },
   ],
 };
