@@ -17,6 +17,7 @@ The feeling this should produce: **quiet confidence, tactile and a little cinema
 | `bg-main` | `#212121` | Page background |
 | `bg-surface` | `#272727` | Cards, section panels, raised surfaces |
 | `accent` | `#DA5921` | Buttons, links, active states, the one warm note in an otherwise dark palette |
+| `accent-foreground` | `#000000` | Text placed on an `accent` fill; required for AA contrast at normal text sizes |
 | `text-primary` | `#EDEDE8` | Headings, primary body text |
 | `text-muted` | `#9B9B95` | Secondary text, captions, meta info (dates, location) |
 | `border` | `#3A3A38` | Hairline dividers, card borders — barely visible, just enough to separate surfaces |
@@ -90,7 +91,7 @@ Cards (`bg-surface` on `bg-main`) use a hairline `border` and modest radius (6�
 
 ## 7. Accessibility
 
-- `accent` (#DA5921) on `bg-main`/`bg-surface` — verify contrast for body text use; it's strong enough for buttons and links but should not be used for long-form text at small sizes without checking contrast ratio.
+- `accent` (#DA5921) does not reach AA contrast against `bg-main` at normal text sizes (4.17:1). Use it as a control fill with `accent-foreground` text, for focus rings and other non-text indicators, or for large decorative text—not as small body/link text on a dark surface.
 - `text-muted` on `bg-surface` needs a contrast check too — dark-on-dark palettes are the easiest place to accidentally fail AA.
 - Visible focus rings in `accent`, consistent across nav links, buttons, and card hover targets.
 - Grain overlay must have `pointer-events: none` and never sit above interactive elements in a way that affects click targets.
