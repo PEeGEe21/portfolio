@@ -36,9 +36,15 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     title: "Udeh Praise C. — Full-Stack Software Engineer",
-    description: "Full-stack software engineer building dependable products across frontend, backend, and infrastructure.",
+    description:
+      "Full-stack software engineer building dependable products across frontend, backend, and infrastructure.",
     siteName: "Udeh Praise C.",
-    images: [{ url: "/opengraph-image", alt: "Udeh Praise C. — Full-Stack Software Engineer" }],
+    images: [
+      {
+        url: "/opengraph-image",
+        alt: "Udeh Praise C. — Full-Stack Software Engineer",
+      },
+    ],
   },
   twitter: { card: "summary_large_image" },
 };
@@ -55,7 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ScrollProgress />
         <a
           href="#main-content"
-          className="fixed top-4 left-4 z-[60] -translate-y-24 rounded-md bg-accent px-4 py-2 font-semibold text-accent-foreground transition-transform focus:translate-y-0"
+          className="fixed top-4 left-4 z-60 -translate-y-24 rounded-md bg-accent px-4 py-2 font-semibold text-accent-foreground transition-transform focus:translate-y-0"
         >
           Skip to content
         </a>

@@ -37,14 +37,16 @@ export default async function Home() {
       </header>
 
       <main id="main-content" className="relative z-10">
-        <section id="intro" aria-labelledby="intro-title" className="mx-auto flex min-h-[78vh] max-w-site scroll-mt-24 flex-col justify-center px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
+        <section id="intro" aria-labelledby="intro-title" className="mx-auto flex min-h-[78vh] max-w-site scroll-mt-24 flex-col justify-center px-5 py-24 sm:px-8 lg:px-10 lg:py-32 relative">
           <Reveal><p className="font-mono text-xs tracking-[0.18em] text-text-muted uppercase">{profile.role} · {profile.location}</p>
           <h1 id="intro-title" className="mt-6 max-w-5xl font-display leading-[1.02] font-semibold tracking-[-0.045em] text-text-primary text-5xl sm:text-7xl lg:text-[5.75rem]">Building dependable products, from interface to infrastructure.</h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-text-muted sm:text-xl sm:leading-9">{profile.intro}</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <ScrollLink targetId="work" className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90">View selected work</ScrollLink>
             {profile.email ? <a href={`mailto:${profile.email}`} className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-text-muted hover:bg-bg-surface">Get in touch</a> : null}
-          </div></Reveal>
+          </div>
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:flex hidden flex-col items-center gap-2 text-mono text-[10px] text-muted uppercase tracking-widest"><span>Scroll</span><span className="block w-px h-8 bg-linear-to-b from-zinc-500 to-transparent animate-pulse"></span></div>
+          </Reveal>
         </section>
 
         <section id="work" aria-labelledby="work-title" className="scroll-mt-24 border-t border-border">

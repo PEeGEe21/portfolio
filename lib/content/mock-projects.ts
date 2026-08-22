@@ -142,13 +142,7 @@ export const projectRecords: ProjectRecord[] = [
         alt: "Tailpoint landing page showing its project workspace and project-tracking dashboard",
         width: 1200,
         height: 800,
-      },
-      {
-        src: "/projects/online-journal.webp",
-        alt: "Tailpoint landing page showing its project workspace and project-tracking dashboard",
-        width: 1200,
-        height: 800,
-      },
+      }
     ],
   },
   {
