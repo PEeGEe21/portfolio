@@ -56,6 +56,14 @@ button {
   outline-offset: 4px;
 }
 
+.contact-field:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 0 0 4px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
 .grain-overlay {
   position: fixed;
   inset: 0;

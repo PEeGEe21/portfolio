@@ -56,9 +56,9 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
   return (
     <>
       <header className="border-b border-border">
-        <nav aria-label="Case study navigation" className="mx-auto flex max-w-5xl items-center justify-between px-5 py-5 sm:px-8">
+        <nav aria-label="Case study navigation" className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
           <Link href="/" className="font-display text-lg font-semibold">Praise<span className="text-accent">.</span></Link>
-          <Link href="/#work" className="text-sm text-text-muted transition-colors hover:text-text-primary"><span aria-hidden="true">←</span> All work</Link>
+          <Link href="/work" className="text-sm text-text-muted transition-colors hover:text-text-primary"><span aria-hidden="true">←</span> All work</Link>
         </nav>
       </header>
       <main id="main-content" className="relative z-10">
@@ -96,7 +96,7 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
           </div>
         </article>
       </main>
-      <footer className="border-t border-border"><div className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/#work" className="hover:text-text-primary">More work ↑</Link></div></footer>
+      <footer className="border-t border-border"><div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/work" className="hover:text-text-primary">More work ↑</Link></div></footer>
     </>
   );
 }
