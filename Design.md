@@ -60,8 +60,8 @@ Single scrolling page with anchor-linked nav — same shape you flagged as effec
 │                              [Resume →]    │ <- accent-colored button
 ├───────────────────────────────────────────┤
 │                                             │
-│   Full-stack developer with a               │ <- Sora, large, hero statement
-│   journalism background.                     │
+│   Full-stack engineer building               │ <- Sora, large, hero statement
+│   dependable products end to end.             │
 │                                             │
 │   [View work]  [Get in touch]               │ <- primary = accent fill, secondary = outline
 │                                             │

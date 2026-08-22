@@ -23,7 +23,7 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Praise — Full-Stack Developer",
   description:
-    "Portfolio of Praise, a full-stack developer with a background in journalism and education.",
+    "Portfolio of Udeh Praise C., a full-stack software engineer building dependable products across frontend, backend, and infrastructure.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

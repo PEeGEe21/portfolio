@@ -4,7 +4,7 @@
 
 ## 1. Problem
 
-Recruiters, hiring managers, and potential clients need a fast, credible way to evaluate Praise's work. A static resume or a GitHub profile alone doesn't tell the story behind the projects (why decisions were made, what problems were solved) or the unusual background (Mass Communication → journalism/education → software development) that makes the profile distinctive.
+Recruiters, hiring managers, and potential clients need a fast, credible way to evaluate Praise's work. A static resume or a GitHub profile alone doesn't tell the story behind the projects: why decisions were made, what problems were solved, or how an early interest in computers developed into end-to-end product ownership.
 
 ## 2. Goal
 

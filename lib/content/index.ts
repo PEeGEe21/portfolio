@@ -6,7 +6,9 @@ const isPublishedProject = (project: (typeof projectRecords)[number]): project i
   project.editorialStatus === "published";
 
 export async function getProjects(): Promise<Project[]> {
-  return projectRecords.filter(isPublishedProject);
+  return projectRecords
+    .filter(isPublishedProject)
+    .sort((first, second) => Number(second.featured) - Number(first.featured));
 }
 
 export async function getProject(slug: string): Promise<Project | null> {

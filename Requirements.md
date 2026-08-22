@@ -58,6 +58,7 @@ Mock data shapes should already match the planned Sanity schema (Project, Profil
 |---|---|---|---|
 | `slug` | string | Required | URL identifier, e.g. `tailpoint` |
 | `title` | string | Required | |
+| `featured` | boolean | Required | Featured projects sort ahead of the rest on the homepage |
 | `summary` | string | Required | One or two sentences, used on the homepage card |
 | `status` | enum | Required | `shipped` \| `in-progress` \| `archived` — see §9 for how each renders |
 | `problem` | rich text | Required | What problem the project solves and for whom |
@@ -122,15 +123,15 @@ Content is a Phase 1 dependency, not placeholder work to defer until after the l
 
 Use these story beats rather than presenting the Journey as a chronology of job titles:
 
-1. **Origin:** Mass Communication and the early interest in understanding people, shaping information, and communicating clearly.
-2. **Transferable practice:** what journalism and education taught—asking better questions, researching unfamiliar subjects, explaining complexity, and designing for an audience.
-3. **Turn toward software:** the specific motivation or moment that made building systems the next step. Replace general enthusiasm for technology with a truthful concrete catalyst before publishing.
-4. **Evidence of growth:** how that transition shows up in real work such as Tailpoint, Serene EMR, HotelOS, or the AI Job Finder App, including one meaningful technical or product decision.
-5. **Present direction:** the kind of full-stack problems Praise now solves and what the mixed background contributes to a team.
+1. **Origin:** an interest in computers that began in school and developed into studying computer science.
+2. **Growth:** the progression from learning programming fundamentals to understanding complete product systems.
+3. **Full-stack direction:** the motivation to work across interfaces, APIs, data, permissions, and infrastructure rather than one isolated layer.
+4. **Evidence of growth:** how that direction shows up in real work such as Tailpoint or HotelOS, including one meaningful technical or product decision.
+5. **Present direction:** the kinds of full-stack problems Praise now solves and the value brought to a team.
 
 Drafting frame (not publish-ready copy):
 
-> I started in Mass Communication, then worked across journalism and education—fields that taught me to investigate unfamiliar problems, listen closely, and make complex ideas useful to other people. Software became a way to apply those instincts by building the tool, not only explaining the problem. **[Add the concrete catalyst for the transition here.]** Since then, projects such as **[choose one or two]** have pushed me to make decisions across product, backend, and frontend concerns. **[Add one specific decision and its effect.]** Today I build full-stack products with the same audience-first mindset: understand the real constraint, communicate the trade-off, and ship something people can use. **[Close with the kinds of problems or opportunities sought next.]**
+> My interest in computers began in school and led me to study computer science. As I moved from learning the fundamentals to building real products, I became interested in how the interface, backend, data, and infrastructure work together. Since then, projects such as **[choose one or two]** have pushed me to make decisions across the complete product. **[Add one specific decision and its effect.]** Today I build full-stack systems by understanding the real constraint, communicating the trade-off, and shipping something people can use. **[Close with the kinds of problems or opportunities sought next.]**
 
 ### Per-project case studies
 

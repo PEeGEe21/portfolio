@@ -18,6 +18,7 @@ export type ProjectDraft = {
   editorialStatus: "draft";
   slug: string;
   title: string;
+  featured: boolean;
   summary: string;
   stack: string[];
   liveUrl: string | null;
