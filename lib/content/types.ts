@@ -29,6 +29,8 @@ export type ProjectDraft = {
   constraints: string[];
   decisions: string[];
   outcome: string[];
+  useVideo?: boolean;
+  videoUrl?: string | null;
   screenshots: ProjectImage[];
 };
 

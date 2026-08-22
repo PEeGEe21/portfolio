@@ -20,12 +20,12 @@ export default async function WorkPage() {
   return (
     <>
       <header className="border-b border-border">
-        <nav aria-label="Work navigation" className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+        <nav aria-label="Work navigation" className="mx-auto flex max-w-site items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
           <Link href="/" className="font-display text-lg font-semibold">Praise<span className="text-accent">.</span></Link>
           <Link href="/" className="text-sm text-text-muted transition-colors hover:text-text-primary"><span aria-hidden="true">←</span> Home</Link>
         </nav>
       </header>
-      <main id="main-content" className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <main id="main-content" className="relative z-10 mx-auto max-w-site px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
         <p className="font-mono text-xs tracking-[0.18em] text-text-muted uppercase">Complete archive</p>
         <h1 className="mt-4 max-w-4xl font-display text-5xl font-semibold tracking-[-0.04em] sm:text-7xl">Work built across the stack.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-text-muted">Explore the problems, constraints, technical decisions, and outcomes behind each published project.</p>
@@ -34,7 +34,7 @@ export default async function WorkPage() {
         </div>
       </main>
       <footer className="relative z-10 border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-site flex-col gap-5 px-5 py-8 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
           <p>© {new Date().getFullYear()} {profile.name}</p>
           <ul className="flex flex-wrap gap-5">
             {profile.socialLinks.map((link) => (

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ProjectMedia } from "@/components/project-media";
 import { getProject, getProjects } from "@/lib/content";
 
 type CaseStudyProps = {
@@ -56,7 +56,7 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
   return (
     <>
       <header className="border-b border-border">
-        <nav aria-label="Case study navigation" className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
+        <nav aria-label="Case study navigation" className="mx-auto flex max-w-site items-center justify-between px-5 py-5 sm:px-8">
           <Link href="/" className="font-display text-lg font-semibold">Praise<span className="text-accent">.</span></Link>
           <Link href="/work" className="text-sm text-text-muted transition-colors hover:text-text-primary"><span aria-hidden="true">←</span> All work</Link>
         </nav>
@@ -76,14 +76,8 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
             </div> : null}
           </header>
 
-          <section aria-label="Project preview" className="mx-auto max-w-6xl px-5 sm:px-8">
-            {project.screenshots[0] ? (
-              <Image src={project.screenshots[0].src} alt={project.screenshots[0].alt} width={project.screenshots[0].width} height={project.screenshots[0].height} className="h-auto w-full rounded-lg border border-border bg-bg-surface" priority />
-            ) : (
-              <div className="grid aspect-[16/8] place-items-center overflow-hidden rounded-lg border border-border bg-bg-surface p-8 text-center">
-                <div><p className="font-display text-2xl font-semibold">{project.title}</p><p className="mt-2 font-mono text-xs tracking-[0.16em] text-text-muted uppercase">Case study · visual preview pending</p></div>
-              </div>
-            )}
+          <section aria-label="Project preview" className="mx-auto max-w-site px-5 sm:px-8">
+            <ProjectMedia project={project} />
           </section>
 
           <div className="mx-auto max-w-4xl px-5 py-20 sm:px-8 lg:py-28">
@@ -96,7 +90,7 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
           </div>
         </article>
       </main>
-      <footer className="border-t border-border"><div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/work" className="hover:text-text-primary">More work ↑</Link></div></footer>
+      <footer className="border-t border-border"><div className="mx-auto flex max-w-site items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/work" className="hover:text-text-primary">More work ↑</Link></div></footer>
     </>
   );
 }

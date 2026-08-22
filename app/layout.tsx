@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
+import { InitialLoader } from "@/components/initial-loader";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sora.variable} ${inter.variable} ${jetBrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">
+        <InitialLoader />
         <ScrollProgress />
         <a
           href="#main-content"

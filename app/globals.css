@@ -21,6 +21,7 @@
   --font-display: var(--font-sora);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
+  --container-site: 87.5rem;
 }
 
 * {
@@ -64,6 +65,56 @@ button {
     0 0 0 4px color-mix(in srgb, var(--accent) 16%, transparent);
 }
 
+.initial-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  background: var(--bg-main);
+  animation: loader-exit 400ms ease 500ms forwards;
+}
+
+.initial-loader__mark {
+  font-family: var(--font-sora), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.initial-loader__mark span {
+  color: var(--accent);
+}
+
+.initial-loader__line {
+  width: 7rem;
+  height: 2px;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.initial-loader__line::after {
+  display: block;
+  width: 45%;
+  height: 100%;
+  content: "";
+  background: var(--accent);
+  animation: loader-progress 700ms ease-in-out both;
+}
+
+@keyframes loader-progress {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(245%); }
+}
+
+@keyframes loader-exit {
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -79,6 +130,10 @@ button {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .initial-loader {
+    animation-delay: 0ms;
   }
 
   *,
