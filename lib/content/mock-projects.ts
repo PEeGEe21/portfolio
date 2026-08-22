@@ -155,7 +155,7 @@ export const projectRecords: ProjectRecord[] = [
     summary: "A public Node.js SDK for sending operational events into Tailpoint's governed task-intake and automation workflows.",
     stack: ["Node.js", "TypeScript", "SDK Design", "Event Ingestion"],
     liveUrl: "https://www.npmjs.com/package/@peegee/tailpoint-sdk",
-    repoUrl: "https://www.npmjs.com/package/@peegee/tailpoint-sdk",
+    repoUrl: "https://github.com/PEeGEe21/projecttrakr-sdk",
     status: "in-progress",
     role: "Lead developer",
     problem: [
