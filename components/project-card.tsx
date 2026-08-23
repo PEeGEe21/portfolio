@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Project } from "@/lib/content";
+import { MoveRight } from "lucide-react";
 
 const statusLabels = {
   shipped: "Shipped",
@@ -32,12 +33,7 @@ export function ProjectCard({ index, project }: ProjectCardProps) {
             <li key={technology}>{technology}</li>
           ))}
         </ul>
-        <span
-          aria-hidden="true"
-          className="text-xl text-text-primary transition-transform group-hover:translate-x-1"
-        >
-          →
-        </span>
+        <MoveRight size={14} className="text-text-primary transition-transform group-hover:translate-x-1" />
       </div>
       <Link
         href={`/work/${project.slug}`}

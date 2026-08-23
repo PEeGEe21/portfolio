@@ -4,6 +4,7 @@ import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { ScrollLink } from "@/components/scroll-link";
 import { getProfile, getProjects } from "@/lib/content";
+import { MoveRight, MoveUpRight } from "lucide-react";
 
 export default async function Home() {
   const [profile, projects] = await Promise.all([getProfile(), getProjects()]);
@@ -32,7 +33,7 @@ export default async function Home() {
             <ScrollLink className="transition-colors hover:text-text-primary" targetId="skills">Skills</ScrollLink>
             <ScrollLink className="transition-colors hover:text-text-primary" targetId="contact">Contact</ScrollLink>
           </div>
-          {profile.resumeUrl ? <a className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90" href={profile.resumeUrl}>Résumé <span aria-hidden="true">↗</span></a> : null}
+          {profile.resumeUrl ? <a className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 flex items-center gap-1" href={profile.resumeUrl}>Résumé <MoveUpRight size={12} /></a> : null}
         </nav>
       </header>
 
@@ -60,7 +61,9 @@ export default async function Home() {
               {featuredProjects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}
             </div>
             <div className="mt-10 flex justify-center">
-              <Link href="/work" className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-text-muted hover:bg-bg-surface">View all work <span aria-hidden="true">→</span></Link>
+              <Link href="/work" className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-text-muted hover:bg-bg-surface flex items-center gap-3">View all work 
+                <MoveRight size={14}/>
+              </Link>
             </div>
           </Reveal>
         </section>
@@ -98,7 +101,7 @@ export default async function Home() {
 
       <footer className="relative z-10 mx-auto flex max-w-site flex-col gap-5 px-5 py-8 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
         <p>© {new Date().getFullYear()} {profile.name}</p>
-        <ul className="flex flex-wrap gap-5">{profile.socialLinks.map((link) => <li key={link.href}><a className="hover:text-text-primary" href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a></li>)}</ul>
+        <ul className="flex flex-wrap gap-5">{profile.socialLinks.map((link) => <li key={link.href}><a className="hover:text-text-primary flex items-center gap-2" href={link.href} target="_blank" rel="noreferrer">{link.label} <MoveUpRight size={12} /></a></li>)}</ul>
       </footer>
     </>
   );

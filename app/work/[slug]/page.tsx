@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProjectMedia } from "@/components/project-media";
 import { getProject, getProjects } from "@/lib/content";
+import { MoveLeft, MoveUp, MoveUpRight } from "lucide-react";
 
 type CaseStudyProps = {
   params: Promise<{ slug: string }>;
@@ -58,7 +59,9 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
       <header className="border-b border-border">
         <nav aria-label="Case study navigation" className="mx-auto flex max-w-site items-center justify-between px-5 py-5 sm:px-8">
           <Link href="/" className="font-display text-lg font-semibold">Praise<span className="text-accent">.</span></Link>
-          <Link href="/work" className="text-sm text-text-muted transition-colors hover:text-text-primary"><span aria-hidden="true">←</span> All work</Link>
+          <Link href="/work" className="text-sm text-text-muted transition-colors hover:text-text-primary flex items-center gap-1">
+            <MoveLeft size={12} /> All work
+          </Link>
         </nav>
       </header>
       <main id="main-content" className="relative z-10">
@@ -71,8 +74,8 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
             <p className="mt-7 max-w-3xl text-xl leading-9 text-text-muted">{project.summary}</p>
             <ul aria-label="Technologies used" className="mt-8 flex flex-wrap gap-2">{project.stack.map((item) => <li key={item} className="rounded border border-border px-3 py-2 font-mono text-xs text-text-muted">{item}</li>)}</ul>
             {(project.liveUrl || project.repoUrl) ? <div className="mt-10 flex flex-wrap gap-4">
-              {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noreferrer" className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground">Visit live product <span aria-hidden="true">↗</span></a> : null}
-              {project.repoUrl ? <a href={project.repoUrl} target="_blank" rel="noreferrer" className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-text-primary">View repository <span aria-hidden="true">↗</span></a> : null}
+              {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noreferrer" className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground flex items-center gap-2">Visit live product <MoveUpRight size={12} /></a> : null}
+              {project.repoUrl ? <a href={project.repoUrl} target="_blank" rel="noreferrer" className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-text-primary flex items-center gap-2">View repository <MoveUpRight size={12} /></a> : null}
             </div> : null}
           </header>
 
@@ -90,7 +93,7 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
           </div>
         </article>
       </main>
-      <footer className="border-t border-border"><div className="mx-auto flex max-w-site items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/work" className="hover:text-text-primary">More work ↑</Link></div></footer>
+      <footer className="border-t border-border"><div className="mx-auto flex max-w-site items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/work" className="hover:text-text-primary flex items-center gap-2">More work <MoveUp size={12}/></Link></div></footer>
     </>
   );
 }

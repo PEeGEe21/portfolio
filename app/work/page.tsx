@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ProjectCard } from "@/components/project-card";
 import { getProfile, getProjects } from "@/lib/content";
+import { MoveLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -22,7 +23,7 @@ export default async function WorkPage() {
       <header className="border-b border-border">
         <nav aria-label="Work navigation" className="mx-auto flex max-w-site items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
           <Link href="/" className="font-display text-lg font-semibold">Praise<span className="text-accent">.</span></Link>
-          <Link href="/" className="text-sm text-text-muted transition-colors hover:text-text-primary"><span aria-hidden="true">←</span> Home</Link>
+          <Link href="/" className="text-sm text-text-muted transition-colors hover:text-text-primary flex items-center gap-1"><MoveLeft size={12} /> Home</Link>
         </nav>
       </header>
       <main id="main-content" className="relative z-10 mx-auto max-w-site px-5 py-20 sm:px-8 lg:px-10 lg:py-28">

@@ -6,7 +6,7 @@ export const mockProfile: Profile = {
   location: "Lagos, Nigeria · UTC+1",
   availability: null,
   intro:
-    "I build dependable web products from interface to infrastructure, turning complex workflows into clear experiences for the people who use them. Over the past six years, I have worked across EdTech, Web3, e-commerce, and operations platforms with TypeScript, Next.js, NestJS, Laravel, and relational databases.",
+    "I build dependable web and mobile products from interface to infrastructure, turning complex workflows into clear experiences for the people who use them. Over the past six years, I have worked across EdTech, Web3, e-commerce, and operations platforms with TypeScript, Next.js, NestJS, Laravel, and relational databases.",
   journey: [
     "My interest in computers began when I entered school. I was curious about how they worked and what I could create with them, and that curiosity grew into a clear direction: study computer science and learn how to build useful software.",
     "As I moved from learning the fundamentals to working on real products, I became drawn to the full picture of an application. I did not want to stop at making an interface look right; I wanted to understand the APIs, data, permissions, infrastructure, and product decisions that make the experience dependable from end to end.",
