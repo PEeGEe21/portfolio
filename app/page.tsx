@@ -62,7 +62,7 @@ export default async function Home() {
             </div>
             <div className="mt-10 flex justify-center">
               <Link href="/work" className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-text-primary transition-colors hover:border-text-muted hover:bg-bg-surface flex items-center gap-3">View all work 
-                <MoveRight size={14}/>
+                <MoveRight size={12}/>
               </Link>
             </div>
           </Reveal>

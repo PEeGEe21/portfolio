@@ -49,8 +49,8 @@ export function ContactForm() {
           <textarea id="contact-message" name="message" rows={6} required placeholder="Tell me about your request" className="contact-field min-h-36 w-full resize-y rounded-md border border-border bg-bg-surface px-4 py-3 text-text-primary placeholder:text-text-muted/70 transition-[border-color,box-shadow] hover:border-text-muted" />
         </div>
         <div className="sm:col-span-2">
-          <button type="submit" disabled={submissionState === "submitting"} className="min-h-12 w-full cursor-pointer rounded-md bg-accent px-5 py-3 font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60">
-            {submissionState === "submitting" ? "Sending…" : "Send message"} <span aria-hidden="true">→</span>
+          <button type="submit" disabled={submissionState === "submitting"} className="min-h-12 w-full cursor-pointer rounded-md bg-accent px-5 py-3 font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60 flex items-center gap-3">
+            {submissionState === "submitting" ? "Sending…" : "Send message"} <MoveRight size={12}/>
           </button>
           <p aria-live="polite" className={`mt-3 min-h-6 text-sm ${submissionState === "error" ? "text-red-300" : "text-text-muted"}`}>
             {submissionState === "success" ? "Thanks—your message has been sent." : null}
