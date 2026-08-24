@@ -340,7 +340,14 @@ export const projectRecords: ProjectRecord[] = [
       "Built a near-production-ready platform spanning the dashboard, API, PostgreSQL data layer, role-based access control, real-time updates, background jobs, notifications, exports, and the core operational modules.",
       "HotelOS consolidates workflows that would otherwise require separate tools or manual coordination and provides a foundation for real-time work across hotel departments. Deployment preparation and final production validation remain in progress.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/hotel-os.png",
+        alt: "HotelOS is a full-stack hotel-management platform that consolidates reservations, guest services, operations, finance, staff, and reporting.",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   {
     editorialStatus: "published",
