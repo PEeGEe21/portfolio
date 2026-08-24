@@ -11,9 +11,10 @@ export const projectRecords: ProjectRecord[] = [
     featured: true,
     useVideo: false,
     videoUrl: null,
-    summary: "A publicly launched investment platform where customers discover, purchase, and track fractional ownership in premium whisky casks.",
+    summary:
+      "A publicly launched investment platform where customers discover, purchase, and track fractional ownership in premium whisky casks.",
     stack: ["Next.js", "TypeScript", "Server Actions", "Zustand"],
-    liveUrl: "https://www.digicask.co/",
+    liveUrl: null,
     repoUrl: null,
     status: "shipped",
     role: "Frontend developer",
@@ -31,7 +32,26 @@ export const projectRecords: ProjectRecord[] = [
     outcome: [
       "Launched publicly as DigiCask Finance, enabling customers to discover whisky investments, create accounts, purchase cask shares, and monitor their portfolios.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/digicask/digicask-landing.png",
+        alt: "Painting whisky cask investment in a new light",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/digicask/how-it-works.png",
+        alt: "Blockchain, tokenisation, and a 32-year-old Single Malt.",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/digicask/why-invest.png",
+        alt: "At Digicask, we are democratising this market through our tokenisation process, so everyone can get involved",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   {
     editorialStatus: "published",
@@ -40,7 +60,8 @@ export const projectRecords: ProjectRecord[] = [
     featured: true,
     useVideo: false,
     videoUrl: null,
-    summary: "A computer-based testing platform for creating, taking, automatically grading, and reviewing timed examinations.",
+    summary:
+      "A computer-based testing platform for creating, taking, automatically grading, and reviewing timed examinations.",
     stack: ["Next.js", "NestJS", "TypeScript", "MySQL", "AI Integration"],
     liveUrl: "https://nlp-exam-frontend.vercel.app/",
     repoUrl: null,
@@ -76,7 +97,8 @@ export const projectRecords: ProjectRecord[] = [
     featured: false,
     useVideo: false,
     videoUrl: null,
-    summary: "A publishing platform that takes academic papers from author submission through editorial review, issue management, and publication.",
+    summary:
+      "A publishing platform that takes academic papers from author submission through editorial review, issue management, and publication.",
     stack: ["Next.js", "NestJS", "TypeORM", "MySQL", "Hugging Face"],
     liveUrl: "https://ojs-frontend.vercel.app/",
     repoUrl: null,
@@ -112,7 +134,8 @@ export const projectRecords: ProjectRecord[] = [
     featured: true,
     useVideo: false,
     videoUrl: null,
-    summary: "A multi-tenant work-management platform that brings projects, communication, automation, and AI-assisted productivity into one governed workspace.",
+    summary:
+      "A multi-tenant work-management platform that brings projects, communication, automation, and AI-assisted productivity into one governed workspace.",
     stack: ["Next.js", "NestJS", "TypeScript", "Node.js"],
     liveUrl: "https://tailpoint.vercel.app/",
     repoUrl: null,
@@ -142,7 +165,7 @@ export const projectRecords: ProjectRecord[] = [
         alt: "Tailpoint landing page showing its project workspace and project-tracking dashboard",
         width: 1200,
         height: 800,
-      }
+      },
     ],
   },
   {
@@ -152,7 +175,8 @@ export const projectRecords: ProjectRecord[] = [
     featured: true,
     useVideo: false,
     videoUrl: null,
-    summary: "A public Node.js SDK for sending operational events into Tailpoint's governed task-intake and automation workflows.",
+    summary:
+      "A public Node.js SDK for sending operational events into Tailpoint's governed task-intake and automation workflows.",
     stack: ["Node.js", "TypeScript", "SDK Design", "Event Ingestion"],
     liveUrl: "https://www.npmjs.com/package/@peegee/tailpoint-sdk",
     repoUrl: "https://github.com/PEeGEe21/projecttrakr-sdk",
@@ -182,11 +206,19 @@ export const projectRecords: ProjectRecord[] = [
     featured: false,
     useVideo: false,
     videoUrl: null,
-    summary: "A responsive crypto-gaming platform combining betting, wallet operations, identity verification, bonuses, and account management.",
-    stack: ["Next.js", "TypeScript", "Apollo Client", "GraphQL", "Zustand", "Web3"],
+    summary:
+      "A responsive crypto-gaming platform combining betting, wallet operations, identity verification, bonuses, and account management.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Apollo Client",
+      "GraphQL",
+      "Zustand",
+      "Web3",
+    ],
     liveUrl: null,
     repoUrl: null,
-    status: "in-progress",
+    status: "archived",
     role: "Frontend developer",
     problem: [
       "Crypto bettors need one coherent interface for discovering and playing games while managing authentication, funds, identity verification, bonuses, communication, and account settings.",
@@ -203,7 +235,26 @@ export const projectRecords: ProjectRecord[] = [
       "The frontend now supports an end-to-end journey from authentication and identity checks through wallet funding, gameplay, betting, and account management across mobile and desktop.",
       "The product remains in active development.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/tasty/tasty-landing.png",
+        alt: "A responsive crypto-gaming platform combining betting",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/tasty/tasty-vip-club.png",
+        alt: "A responsive crypto-gaming platform combining betting",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/tasty/spin-the-calabash.png",
+        alt: "A responsive crypto-gaming platform combining betting",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
   {
     editorialStatus: "draft",
@@ -227,13 +278,16 @@ export const projectRecords: ProjectRecord[] = [
     slug: "digi-oracle",
     title: "Digi Oracle",
     featured: false,
-    summary: "A website for a modular blockchain oracle that connects Web3 applications to real-world data and events.",
+    summary:
+      "A website for a modular blockchain oracle that connects Web3 applications to real-world data and events.",
     stack: ["Next.js"],
     liveUrl: "https://digioracle.vercel.app/",
     repoUrl: null,
     status: "shipped",
     role: null,
-    problem: ["Web3 applications need a secure way to consume off-chain data in formats that smart contracts can use."],
+    problem: [
+      "Web3 applications need a secure way to consume off-chain data in formats that smart contracts can use.",
+    ],
     constraints: [editorialPlaceholder],
     decisions: [editorialPlaceholder],
     outcome: [editorialPlaceholder],
@@ -244,7 +298,8 @@ export const projectRecords: ProjectRecord[] = [
     slug: "v-oracle",
     title: "V-Oracle",
     featured: false,
-    summary: "A frontend website built with semantic HTML, CSS, and JavaScript.",
+    summary:
+      "A frontend website built with semantic HTML, CSS, and JavaScript.",
     stack: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://v-oracle.vercel.app/",
     repoUrl: null,
@@ -263,7 +318,8 @@ export const projectRecords: ProjectRecord[] = [
     featured: true,
     useVideo: false,
     videoUrl: null,
-    summary: "A full-stack hotel-management platform that consolidates reservations, guest services, operations, finance, staff, and reporting.",
+    summary:
+      "A full-stack hotel-management platform that consolidates reservations, guest services, operations, finance, staff, and reporting.",
     stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "BullMQ"],
     liveUrl: null,
     repoUrl: null,
@@ -293,11 +349,19 @@ export const projectRecords: ProjectRecord[] = [
     featured: true,
     useVideo: false,
     videoUrl: null,
-    summary: "A Web3 launchpad for creating tokens and running fair launches, airdrops, staking campaigns, and token locks on EDU Chain.",
-    stack: ["Next.js", "TypeScript", "RainbowKit", "Wagmi", "Ethers.js", "Web3"],
-    liveUrl: "https://app.thrustpad.finance/",
+    summary:
+      "A Web3 launchpad for creating tokens and running fair launches, airdrops, staking campaigns, and token locks on EDU Chain.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "RainbowKit",
+      "Wagmi",
+      "Ethers.js",
+      "Web3",
+    ],
+    liveUrl: null,
     repoUrl: null,
-    status: "in-progress",
+    status: "shipped",
     role: "Frontend/Web3 developer",
     problem: [
       "Project owners need an interface for creating tokens and managing launches, airdrops, staking, and token locks, while investors need a clear way to discover launches and participate through their wallets.",
@@ -313,6 +377,61 @@ export const projectRecords: ProjectRecord[] = [
     outcome: [
       "Delivered a functional EDU Chain launchpad interface with on-chain token creation and the foundations for managing launches, locks, staking campaigns, and airdrops. The product remains in active development.",
     ],
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/projects/thrustpad/thrustpad-hero.webp",
+        alt: "Thrustpad is a decentralized Initial Liquidity Offering (ILO) launchpad that empowers blockchain projects to efficiently raise funds",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-stake.webp",
+        alt: "The stake feature lets users lock their tokens in return for rewards.",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-lock-for-existing-project.webp",
+        alt: "Prevents rug pulls and ensuring investors feel safe backing a project",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-lock.webp",
+        alt: "Our token locking feature allows project owners to lock liquidity for a defined period",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-fair-launch-2.webp",
+        alt: "Fair launch mechanism ensures that all participants have equal access, fostering trust and transparency in the ecosystem",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-fair-launch.webp",
+        alt: "Fair launch mechanism ensures that all participants have equal access, fostering trust and transparency in the ecosystem",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-create-token.webp",
+        alt: "Thrustpad simplifies the process, allowing any founder (technical or non-technical) to create a token effortlessly",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-airdrop-2.webp",
+        alt: "Automated airdrop system lets projects reward early adopters and loyal community members",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/projects/thrustpad/launchpad-airdrop.webp",
+        alt: "Automated airdrop system lets projects reward early adopters and loyal community members",
+        width: 1200,
+        height: 800,
+      },
+    ],
   },
 ];

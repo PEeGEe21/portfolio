@@ -1,5 +1,6 @@
 "use client";
 
+import { MoveRight } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 type SubmissionState = "idle" | "submitting" | "success" | "error";

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { Project } from "@/lib/content";
+import { MoveRight, MoveLeft } from "lucide-react";
 
 type ProjectMediaProps = {
   project: Project;
@@ -104,8 +105,8 @@ export function ProjectMedia({ project }: ProjectMediaProps) {
         ))}
         {hasMultipleScreenshots ? (
           <div className="absolute inset-x-4 top-1/2 z-20 flex -translate-y-1/2 justify-between">
-            <button type="button" onClick={showPrevious} aria-label="Show previous screenshot" className="grid size-11 cursor-pointer place-items-center rounded-full border border-border bg-bg-main/90 text-xl text-text-primary shadow-lg backdrop-blur transition-colors hover:border-text-muted items-center justify-center">←</button>
-            <button type="button" onClick={showNext} aria-label="Show next screenshot" className="grid size-11 cursor-pointer place-items-center rounded-full border border-border bg-bg-main/90 text-xl text-text-primary shadow-lg backdrop-blur transition-colors hover:border-text-muted items-center justify-center">→</button>
+            <button type="button" onClick={showPrevious} aria-label="Show previous screenshot" className="grid size-11 cursor-pointer place-items-center rounded-full border border-border bg-bg-main/90 text-xl text-text-primary shadow-lg backdrop-blur transition-colors hover:border-text-muted items-center justify-center"><MoveLeft size={12}/></button>
+            <button type="button" onClick={showNext} aria-label="Show next screenshot" className="grid size-11 cursor-pointer place-items-center rounded-full border border-border bg-bg-main/90 text-xl text-text-primary shadow-lg backdrop-blur transition-colors hover:border-text-muted items-center justify-center"><MoveRight size={12}/></button>
           </div>
         ) : null}
       </div>
