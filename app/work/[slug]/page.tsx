@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProjectMedia } from "@/components/project-media";
 import { getProject, getProjects } from "@/lib/content";
-import { MoveLeft, MoveUp, MoveUpRight } from "lucide-react";
+import { MoveLeft, MoveRight, MoveUp, MoveUpRight } from "lucide-react";
 
 type CaseStudyProps = {
   params: Promise<{ slug: string }>;
@@ -44,8 +44,12 @@ export async function generateMetadata({ params }: CaseStudyProps): Promise<Meta
 
 export default async function CaseStudy({ params }: CaseStudyProps) {
   const { slug } = await params;
-  const project = await getProject(slug);
+  const [project, projects] = await Promise.all([getProject(slug), getProjects()]);
   if (!project) notFound();
+
+  const projectIndex = projects.findIndex((item) => item.slug === project.slug);
+  const previousProject = projects.at(projectIndex - 1) ?? projects.at(-1);
+  const nextProject = projects.at((projectIndex + 1) % projects.length);
 
   const sections = [
     { title: "The problem", paragraphs: project.problem },
@@ -91,6 +95,33 @@ export default async function CaseStudy({ params }: CaseStudyProps) {
               </section>
             ))}
           </div>
+
+          {projects.length > 1 && previousProject && nextProject ? (
+            <nav aria-label="Browse case studies" className="mx-auto grid max-w-site gap-4 border-t border-border px-5 py-10 sm:grid-cols-2 sm:px-8">
+              <Link
+                href={`/work/${previousProject.slug}`}
+                rel="prev"
+                className="group flex min-h-32 items-center gap-4 rounded-md border border-border bg-bg-surface px-5 py-6 transition-colors hover:border-accent sm:px-7"
+              >
+                <MoveLeft aria-hidden="true" className="shrink-0 text-accent transition-transform group-hover:-translate-x-1" size={20} />
+                <span>
+                  <span className="block font-mono text-xs tracking-[0.14em] text-text-muted uppercase">Previous project</span>
+                  <span className="mt-2 block font-display text-xl font-semibold tracking-tight text-text-primary">{previousProject.title}</span>
+                </span>
+              </Link>
+              <Link
+                href={`/work/${nextProject.slug}`}
+                rel="next"
+                className="group flex min-h-32 items-center justify-between gap-4 rounded-md border border-border bg-bg-surface px-5 py-6 text-right transition-colors hover:border-accent sm:px-7"
+              >
+                <span className="ml-auto">
+                  <span className="block font-mono text-xs tracking-[0.14em] text-text-muted uppercase">Next project</span>
+                  <span className="mt-2 block font-display text-xl font-semibold tracking-tight text-text-primary">{nextProject.title}</span>
+                </span>
+                <MoveRight aria-hidden="true" className="shrink-0 text-accent transition-transform group-hover:translate-x-1" size={20} />
+              </Link>
+            </nav>
+          ) : null}
         </article>
       </main>
       <footer className="border-t border-border"><div className="mx-auto flex max-w-site items-center justify-between gap-6 px-5 py-8 text-sm text-text-muted sm:px-8"><p>Built by Udeh Praise C.</p><Link href="/work" className="hover:text-text-primary flex items-center gap-2">More work <MoveUp size={12}/></Link></div></footer>
